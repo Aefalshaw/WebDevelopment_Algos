@@ -1,0 +1,750 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Web Development Algorithims Written in JavaScript</title>
+    <script>
+
+        function a() {
+            return 35;
+        }
+        console.log(a()); // Should print 35
+
+        function a() {
+            return 4;
+        }
+        console.log(a() + a()); // Should print 8
+
+        function a(b) {
+            return b;
+        }
+        console.log(a(2) + a(4)); // Should print 6
+
+        function a(b) {
+            console.log(b);
+            return b * 3;
+        }
+        console.log(a(3));// Should print 3 & 9
+
+        function a(b) {
+            return b * 4;
+            console.log(b);
+        }
+        console.log(a(10)); // Should print 40
+
+        function a(b) {
+            if (b < 10) {
+                return 2;
+            }
+            else {
+                return 4;
+            }
+            console.log(b);
+        }
+        console.log(a(15)); // Should print 4
+
+        function a(b, c) {
+            return b * c;
+        }
+        console.log(10, 3); // Should print 10 & 3
+        console.log(a(3, 10)); // Should print 30
+
+        function a(b) {
+            for (var i = 0; i < 10; i++) {
+                console.log(i);
+            }
+            return i;
+        }
+        console.log(3); // Should print 3
+        console.log(4); // Should print 4
+
+        function a() {
+            for (var i = 0; i < 10; i++) {
+                i = i + 2;
+                console.log(i);
+            }
+        }
+        a(); // Should print 2 5 8 11
+
+        function a(b, c) {
+            for (var i = 0; i < 10; i++) {
+                console.log(i);
+            }
+            return b * c;
+        }
+        a(0, 10);
+        console.log(a(0, 10)); // Should print 0 1 2 3 4 5 6 7 8 9 0 1 2 3 4 5 6 7 8 9 0
+
+        function a() {
+            for (var i = 0; i < 10; i++) {
+                for (var j = 0; j < 10; j++) {
+                    console.log(j);
+                }
+                console.log(i);
+            }
+        } // Should print nothing since the function wasnt called 
+
+        var z = 10;
+        function a() {
+            var z = 15;
+            console.log(z);
+        }
+        console.log(z); // Should print 10
+
+        var z = 10;
+        function a() {
+            var z = 15;
+            console.log(z);
+        }
+        a();
+        console.log(z); // Should print 15 10
+
+        var z = 10;
+        function a() {
+            var z = 15;
+            console.log(z);
+            return z;
+        }
+        z = a();
+        console.log(z); // Should print 15 15
+
+        // Get 1 to 255 - Write a function that returns an array with all the numbers from 1 to 255.
+        function get_array() {
+            var arr = [];
+            for (var i = 1; i <= 255; i++) {
+                arr.push(i);
+            }
+            return arr;
+        }
+
+        // Get even 1000 - Write a function that would get the sum of all the even numbers from 1 to 1000.  You may use a modulus operator for this exercise.
+        function sum_even_numbers() {
+            var sum = 0;
+            for (var i = 0; i <= 1000; i++) {
+                if (i % 2 === 0) {
+                    sum += i;
+                }
+            }
+            return sum;
+        }
+
+        // Sum odd 5000 - Write a function that returns the sum of all the odd numbers from 1 to 5000.(e.g. 1 + 3 + 5 +...+4997 + 4999).
+        function sum_even_numbers() {
+            var sum = 0;
+            for (var i = 0; i <= 1000; i++) {
+                if (i % 2 === 0) {
+                    sum += i;
+                }
+            }
+            return sum;
+        }
+
+        // Iterate an array - Write a function that returns the sum of all the values within an array. (e.g. [1, 2, 5] returns 8.[-5, 2, 5, 12] returns 14).
+        function sum_even_numbers() {
+            var sum = 0;
+            for (var i = 0; i <= 1000; i++) {
+                if (i % 2 === 0) {
+                    sum += i;
+                }
+            }
+            return sum;
+        }
+
+        // Find max - Given an array with multiple values, write a function that returns the maximum number in the array. (e.g.for[-3, 3, 5, 7] max is 7)
+        function sum_even_numbers() {
+            var sum = 0;
+            for (var i = 0; i <= 1000; i++) {
+                if (i % 2 === 0) {
+                    sum += i;
+                }
+            }
+            return sum;
+        }
+
+        // Find average - Given an array with multiple values, write a function that returns the average of the values in the array. (e.g.for[1, 3, 5, 7, 20] average is 7.2)
+        function sum_even_numbers() {
+            var sum = 0;
+            for (var i = 0; i <= 1000; i++) {
+                if (i % 2 === 0) {
+                    sum += i;
+                }
+            }
+            return sum;
+        }
+
+        // Array odd - Write a function that would return an array of all the odd numbers between 1 to 50.(ex. [1, 3, 5, .... , 47, 49]).Hint: Use 'push' method.
+        function sum_even_numbers() {
+            var sum = 0;
+            for (var i = 0; i <= 1000; i++) {
+                if (i % 2 === 0) {
+                    sum += i;
+                }
+            }
+            return sum;
+        }
+
+        // Greater than Y - Given value of Y, write a function that takes an array and returns the number of values that are greater than Y.For example if arr = [1, 3, 5, 7] and Y = 3, your function will return 2.(There are two values in the array greater than 3, which are 5, 7).
+        function greaterY(arr, Y) {
+            var count = 0;
+
+            for (var i = 0; i < arr.length; i++) {
+                if (arr[i] > Y) {
+                    count++;
+                }
+            }
+            return count;
+        }
+
+        // Squares - Given an array with multiple values, write a function that replaces each value in the array with the value squared by itself. (e.g. [1, 5, 10, -2] will become[1, 25, 100, 4])
+        function greaterY(arr, Y) {
+            var count = 0;
+
+            for (var i = 0; i < arr.length; i++) {
+                if (arr[i] > Y) {
+                    count++;
+                }
+            }
+            return count;
+        }
+
+        // Negatives - Given an array with multiple values, write a function that replaces any negative numbers within the array with the value of 0. When the program is done the array should contain no negative values. (e.g. [1, 5, 10, -2] will become[1, 5, 10, 0])
+        function greaterY(arr, Y) {
+            var count = 0;
+
+            for (var i = 0; i < arr.length; i++) {
+                if (arr[i] > Y) {
+                    count++;
+                }
+            }
+            return count;
+        }
+
+        // Max / Min / Avg - Given an array with multiple values, write a function that returns a new array that only contains the maximum, minimum, and average values of the original array. (e.g. [1, 5, 10, -2] will return [10, -2, 3.5])
+        function greaterY(arr, Y) {
+            var count = 0;
+
+            for (var i = 0; i < arr.length; i++) {
+                if (arr[i] > Y) {
+                    count++;
+                }
+            }
+            return count;
+        }
+
+        // Swap Values - Write a function that will swap the first and last values of any given array.The default minimum length of the array is 2.(e.g. [1, 5, 10, -2] will become[-2, 5, 10, 1]).
+        function greaterY(arr, Y) {
+            var count = 0;
+
+            for (var i = 0; i < arr.length; i++) {
+                if (arr[i] > Y) {
+                    count++;
+                }
+            }
+            return count;
+        }
+
+        // Number to String - Write a function that takes an array of numbers and replaces any negative values within the array with the string 'Dojo'.For example if array = [-1, -3, 2], your function will return ['Dojo', 'Dojo', 2].
+        function numToStr(arr) {
+            for (var i = 0; i < arr.length; i++) {
+                if (arr[i] < 0) {
+                    arr[i] = 'Dojo'
+                }
+            }
+            return arr;
+        }
+
+        // Biggie Size - Given an array, write a function that changes all positive numbers in the array to "big".  
+        // Example: makeItBig([-1,3,5,-5]) returns that same array, changed to [-1, "big", "big", -5].
+
+        function makeItBig(arr) {
+            // iterate through the array
+            for (var i = 0; i < arr.length; i++) {
+                // compare the value to 0 to make sure it's positive
+                if (arr[i] > 0) {
+                    // switch value to be 'big'
+                    arr[i] = "big";
+                }
+            }
+            return arr;
+        }
+        console.log(makeItBig([-1, 3, 5, 7, -5]));
+
+        // Print Low, Return High - Create a function that takes array of numbers.  
+        //The function should print the lowest value in the array, and return the highest value in the array.
+
+        function printLowReturnHigh(arr) {
+            var low = arr[0];
+            var high = arr[0];
+            for (var i = 1; i < arr.length; i++) {
+                if (arr[i] < low) {
+                    low = arr[i];
+                } else if (arr[i] > high) {
+                    high = arr[i];
+                }
+            }
+            console.log(low);
+            return high;
+        }
+
+        console.log(printLowReturnHigh([50, -1, 20, 12]));
+
+        // Print One, Return Another - Build a function that takes array of numbers.  
+        //The function should print second-to-last value in the array, and return first odd value in the array.
+
+        function print2ndToLastReturnOdd(arr) {
+            console.log(arr[arr.length - 2]);
+            for (var i = 0; i < arr.length; i++) {
+                if (arr[i] % 2 == 1) {
+                    return arr[i];
+                }
+            }
+        }
+        console.log(print2ndToLastReturnOdd([0, 2, 1, 4, 3]));
+
+        // Double Vision - Given array, create a function to return a new array where each value in the original has been doubled.  
+        //Calling double([1,2,3]) should return [2,4,6] without changing original.
+
+        function doubleVision(arr) {
+            var newArr = [];
+            for (var i = 0; i < arr.length; i++) {
+                newArr.push(arr[i] * 2);
+            }
+            return newArr;
+        }
+
+        console.log(doubleVision([1, 2, 3]));
+
+        // Count Positives - Given an array of numbers, 
+        // create a function to replace the last value with the number of 
+        // positive values found in the array.  Example, countPositives([-1,1,1,1]) 
+        // changes the original array to [-1,1,1,3] and returns it.
+
+        function countPositives(arr) {
+            var count = 0;
+            for (var i = 0; i < arr.length; i++) {
+                if (arr[i] > 0) {
+                    count++;
+                    arr[arr.length - 1] = count;
+                }
+            }
+            console.log(arr);
+        }
+        countPositives([-1, 1, 1, 1])
+
+        // Evens and Odds - Create a function that accepts an array.  
+        // Every time that array has three odd values in a row, print "That's odd!".  
+        // Every time the array has three evens in a row, print "Even more so!".
+
+        function evensAndOdds(arr) {
+            var evens = 0;
+            var odds = 0;
+
+            for (var i = 0; i < arr.length; i++) {
+
+                if (arr[i] % 2 !== 0) {
+                    odds++;
+                    evens = 0;
+                } else {
+                    evens++;
+                    odds = 0;
+                }
+
+                if (odds === 3) {
+                    console.log("That's odd!");
+                    odds = 0;
+                } else if (evens === 3) {
+                    console.log("Even more so!");
+                    evens = 0;
+                }
+            }
+        }
+        evensAndOdds([1, 2, 3, 5, 7]);
+        evensAndOdds([2, 4, 6, 1, 3]);
+
+        // Increment the Seconds - Given an array of numbers arr, 
+        // add 1 to every other element, specifically those whose index is odd 
+        // (arr[1], arr[3], arr[5], etc).  Afterward, console.log each array value and return arr.
+
+        function incrementTheSeconds(arr) {
+            for (var i = 0; i < arr.length; i++) {
+                if (i % 2 !== 0) {
+                    arr[i] += 1;
+                }
+            }
+            console.log(arr);
+            return arr;
+        }
+        incrementTheSeconds([1, 2, 3, 4, 5, 6, 7, 8])
+
+        // Previous Lengths - You are passed an array (similar to saying 'takes in an array' or 
+        // 'given an array') containing strings.  Working within that same array, 
+        // replace each string with a number - the length of the string at the previous 
+        // array index - and return the array.  For example, previousLengths(["hello", "dojo", "awesome"]) 
+        // should return ["hello", 5, 4]. Hint: Can for loops only go forward?
+
+        function previousLengths(arr) {
+
+            for (var i = arr.length - 1; i > 0; i--) {
+                console.log(arr[i - 1].length);
+            }
+        }
+        previousLengths(["hello", "dojo", "awesome", "python", "ruby"]);
+
+        // Add Seven - Build a function that accepts an array. 
+        // Return a new array with all the values of the original, but add 7 to each. 
+        // Do not alter the original array.  Example, addSeven([1,2,3]) 
+        // should return [8,9,10] in a new array.
+
+        function addSeven(arr) {
+            var arrnew = [];
+            for (var i = 0; i < arr.length; i++) {
+                arr[i] += 7;
+            }
+            console.log(arr)
+            return arr;
+        }
+        addSeven([1, 2, 3]);
+
+        // Reverse Array - Given an array, write a function that reverses its values, in-place.  
+        // Example: reverse([3,1,6,4,2]) returns the same array, 
+        // but now contains values reversed like so... [2,4,6,1,3].  
+        // Do this without creating an empty temporary array.  
+        // (Hint: you'll need to swap values).
+
+        function reverseArray(arr) {
+            for (var i = 0; i < arr.length; i++) {
+                arr.reverse();
+            }
+
+            console.log(arr);
+            return arr;
+        }
+        reverseArray([3, 1, 6, 4, 2]);
+
+        // Outlook: Negative - Given an array, create and return a new one 
+        // containing all the values of the original array, but make them all 
+        // negative (not simply multiplied by -1). Given [1,-3,5], return [-1,-3,-5].
+
+        function outlookNegative(arr) {
+            var newarr = []
+            for (var i = 0; i < arr.length; i++) {
+                if (arr[i] > 0) {
+                    arr[i] = arr[i] * -1;
+                }
+                newarr.push(arr[i])
+            }
+            console.log(newarr);
+            return newarr;
+        }
+        outlookNegative([1, -3, 5])
+
+        // Always Hungry - Create a function that accepts an array, and 
+        // prints "yummy" each time one of the values is equal to "food".  
+        // If no array values are "food", then print "I'm hungry" once.
+
+        function alwaysHungry(arr) {
+            var gotFood = false;
+            for (var i = 0; i < arr.length; i++) {
+                if (arr[i] === 'food') {
+                    console.log("food")
+                    gotFood = true;
+                }
+            }
+            if (gotFood === false) {
+                console.log('Yummy')
+                gotFood = false;
+            }
+        }
+        alwaysHungry(['chicken', 'food', 'rice', 'food', 'carrots'])
+        alwaysHungry(['chicken', 'water', 'rice', 'carrots'])
+
+        // Swap Toward the Center - Given an array, 
+        // swap the first and last values, third and third-to-last values, etc.  
+        // Example: swapTowardCenter([true,42,"Ada",2,"pizza"]) turns the array into 
+        // ["pizza", 42, "Ada", 2, true].  
+
+        function swapTowardTheCenter(arr) {
+            var temp = arr[0];
+            arr[0] = arr[arr.length - 1];
+            arr[arr.length - 1] = temp;
+            console.log(arr);
+            return arr;
+        }
+        swapTowardTheCenter([true, 42, "Ada", 2, "pizza"]);
+
+        // Scale the Array - Given an array arr and a number num, 
+        // multiply all values in the array arr by the number num, 
+        // and return the changed array arr.  For example, 
+        // scaleArray([1,2,3], 3) should return [3,6,9].
+
+        function scaleTheArray(arr, num) {
+            for (var i = 0; i < arr.length; i++) {
+                arr[i] *= num;
+            }
+            console.log(arr)
+            return arr;
+        }
+        scaleTheArray([1, 2, 3], 3);
+
+        var x = [1, 2, 3, 4, 5, 10]
+        for (var i = 0; i < 5; i++) {
+            console.log(i);
+        }
+        // Should print 0 1 2 3 4
+
+        var x = [1, 2, 3, 4, 5, 10]
+        for (var i = 0; i < 5; i++) {
+            i = i + 1;
+            console.log(i);
+        }
+        // Should print 1 3 5
+
+        var x = [1, 2, 3, 4, 5, 10]
+        for (var i = 0; i < 5; i++) {
+            i = i + 3;
+            console.log(i);
+        }
+        // Should print 3 7
+
+        function y(num1, num2) {
+            return num1 + num2;
+        }
+        console.log(y(2, 3));// should print 5
+        console.log(y(3, 5));// should print 8
+
+        a = 15;
+        console.log(a);
+        function y(a) {
+            console.log(a);
+            return a;
+        }
+        b = y(10);
+        console.log(b); // Should print 15 10 10 undefined
+
+        a = 15;
+        console.log(a);
+        function y(a) {
+            console.log(a);
+            return a * 2;
+        }
+        b = y(10);
+        console.log(b); // Should print 15 10 20 undefined
+
+        function printUpTo(x) {
+            for (var i = 1; i <= 1000; i++) {
+                if (x < 0) {
+                    return false;
+                }
+                console.log(i);
+            }
+        }
+        printUpTo(1000); // should print all the integers from 1 to 1000
+        y = printUpTo(-10); // should return false
+        console.log(y);
+
+        function printSum(x) {
+            var sum = 0;
+            for (var i = 0; i <= x; i++) {
+                sum += i;
+                console.log("i:", i, "sum:", sum);
+            }
+            return sum
+        }
+        y = printSum(255) // should print all the integers from 0 to 255 and with each integer print the sum so far.
+        console.log(y) // should print 32640
+
+        function printSumArray(x) {
+            var sum = 0;
+            for (var i = 0; i < x.length; i++) {
+                sum += x[i];
+            }
+            return sum;
+        }
+        console.log(printSumArray([1, 2, 3])); // should log 6
+
+        function largestElement(arr) {
+            var largestNum = arr[0];
+            for (var i = 1; i < arr.length; i++) {
+                if (arr[i] > largestNum) {
+                    largestNum = arr[i];
+                }
+            }
+            return largestNum
+        }
+        y = largestElement([1, 19, 5, 7, 200, 201, 965, 2, 23, 45, 68, 101]);
+        console.log("The largest number is: ", y);
+
+        function printAverage(x) {
+            sum = 0;
+            for (var i = 0; i < x.length; i++) {
+                sum += x[i];
+            }
+            return sum / x.length
+        }
+        y = printAverage([1, 2, 3]);
+        console.log(y); // should log 2
+
+        y = printAverage([2, 5, 8]);
+        console.log(y); // should log 5
+
+        function returnOddArray() {
+            var arr = [];
+            for (var i = 1; i <= 255; i++) {
+                if (i % 2 !== 0) {
+                    arr.push(i);
+                }
+            }
+            return arr;
+        }
+        y = returnOddArray();
+        console.log(y); // should log [1,3,5,...,253,255]
+
+        function squareValue(arr) {
+            for (var i = 0; i < arr.length; i++) {
+                arr[i] *= arr[i];
+            }
+            return arr;
+        }
+        y = squareValue([1, 2, 3]);
+        console.log(y); // should log [1,4,9]
+
+        y = squareValue([2, 5, 8]);
+        console.log(y); // should log [4,25,64]
+
+        function greaterThanY(arr, Y) {
+            var count = 0;
+            for (var i = 0; i < arr.length; i++) {
+                if (arr[i] > Y) {
+                    count++;
+                }
+            }
+            return count;
+        }
+        console.log(greaterThanY([1, 2, 3, 4], 2)); // Should print 2
+        console.log(greaterThanY([12, 21, 0, 1, 123, 23, 22, 98.56], 19)); // Should print 6
+        console.log(greaterThanY([false, 'Dojo', -3, 21], 34)); // Should print 0
+
+        function maxMinAvg(arr) {
+            var min = arr[0];
+            var max = arr[0];
+            var sum = arr[0];
+
+            for (var i = 0; i < arr.length; i++) {
+                if (arr[i] > max) {
+                    max = arr[i];
+                }
+
+                if (arr[i] < min) {
+                    min = arr[i];
+                }
+                sum += i;
+            }
+
+            var avg = sum / arr.length;
+            var arrnew = [max, min, avg]
+            return arrnew
+        }
+        console.log(maxMinAvg([1, 2, 3, 4])); // Should print out [4, 1, 1.75]
+        console.log(maxMinAvg([12, 24, 11, 22, 0, 1.75])); // Should print out [24, 0, 4.5]
+        console.log(maxMinAvg([0, 1, 0.2, 1.5])); // Should print out [1.5, 0, 1.5]
+
+        function replaceNegatives(arr) {
+            for (var i = 0; i < arr.length; i++) {
+                if (arr[i] < 0) {
+                    arr[i] = 'Dojo';
+                }
+            }
+            return arr;
+        }
+        console.log(replaceNegatives([1, 5, -1, 120])); // Should print [1, 5, "Dojo", 120]
+        console.log(replaceNegatives([-31, 15, -14, -12])); // Should print ["Dojo", 15, "Dojo", "Dojo"]
+        console.log(replaceNegatives([19, 51, 21, 23])); // Should print [19, 51, 21, 23]
+
+        function removeVals(arr, start, end) {
+            var offset = end - start + 1;
+            for (var i = start; i <= offset; i++) {
+                arr[i] = arr[i + offset]
+            }
+            arr.length = arr.length - offset
+            return arr;
+        }
+        console.log(removeVals([20, 30, 40, 50, 60, 70], 2, 4)); // Should print out [20,30,70]
+
+        // Given array, and indices start and end, remove vals in that index range, 
+        // working in-place (hence shortening the array).  
+        // For example, removeVals([20,30,40,50,60,70],2,4) should return [20,30,70].
+
+        function removeVals(arr, start, end) {
+            // this one is tough and you can do it a lot of different ways!
+            var offset = end - start + 1;
+            for (var i = start; i <= offset; i++) {
+                arr[i] = arr[i + offset];
+            }
+            arr.length = arr.length - offset;
+            return arr;
+        }
+        console.log(removeVals([20, 30, 40, 50, 60, 70], 2, 4));
+
+        // Return the given array, after setting any negative values to zero.  
+        // For example resetNegatives( [1,2,-1, -3]) should return [1,2,0,0].
+
+        function resetNegatives(arr) {
+            for (var i = 0; i < arr.length; i++) {
+                if (arr[i] < 0) {
+                    arr[i] = 0;
+                }
+            }
+            return arr;
+        }
+        console.log(resetNegatives([1, 2, -1, -3])); // Should print [1,2,0,0]
+
+        // Given an array, move all values forward by one index, 
+        // dropping the first and leaving a ‘0’ value at the end.  
+        // or example moveForward( [1,2,3]) should return [2,3,0].
+
+        function moveForward(arr) {
+            for (var i = 0; i < arr.length - 1; i++) {
+                arr[i] = arr[i + 1];
+            }
+            arr[arr.length - 1] = 0;
+            return arr;
+        }
+        console.log(moveForward([1, 2, 3])); // Should print [2,3,0]
+
+        // Given an array, return an array with values in a reversed order.  
+        // For example, returnReversed([1,2,3]) should return [3,2,1].
+
+        function returnReversed(arr) {
+            var temp = arr[0];
+            arr[0] = arr[arr.length - 1];
+            arr[arr.length - 1] = temp;
+            return arr;
+        }
+        console.log(returnReversed([1, 2, 3])); // Should print [3,2,1]
+
+        // Create a function that changes a given array to list each original element twice, 
+        // retaining original order.  Have the function return the new array.  
+        // For example repeatTwice( [4,”Ulysses”, 42, false] ) 
+        // should return [4,4, “Ulysses”, “Ulysses”, 42, 42, false, false].
+
+        function repeatTwice(arr) {
+            for (var i = arr.length - 1; i >= 0; i--) {
+                arr[2 * i + 1] = arr[i];
+                arr[2 * i] = arr[i];
+            }
+            return arr;
+        }
+        console.log(repeatTwice([4, 'Ulysses', 42, false]));
+        // Should print [4,4, “Ulysses”, “Ulysses”, 42, 42, false, false]
+
+</script>
+</head>
+
+<body>
+
+</body>
+
+</html>
